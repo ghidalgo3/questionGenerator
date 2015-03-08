@@ -1,0 +1,27 @@
+Discussion notes
+---
+
+Example:
+val collection = problem.collections.pickRandom() // List, Array, Vector, etc
+val numericType = problem.numericTypes.pickRandom() // Int, Double, etc
+val goal = problem.goals.pickRandom() // avg,sum,etc
+val question = "Give $collection of type $numericType write a function to compute $goal"
+val testCases : Seq[Code => Boolean] = ???
+val rules : Seq[Code => Boolean] = ???
+
+Parts:
+
+1 Question Template 
+1a string with substs
+1b substs drawn from subst set
+1c question is randomly generated
+
+2 Rules validator
+2a Each question includes zero or more rules such as "Must use trait", "Cannot use foreach", etc
+2b Uses Scala reflection to introspect code and test rules
+2c Also see https://github.com/lihaoyi/scala-parser
+
+3 Test validation
+3a Each question includes one or more test cases to test answer
+3b Code will need to be executed somehow (eventually safely in some sort of VM)
+3c See this JVM written in Scala: https://github.com/lihaoyi/Metascala
