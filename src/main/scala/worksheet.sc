@@ -1,13 +1,17 @@
-import array.Constraint
+import problem.CollectionProblem
 
-
-import array.Problem
-
-val noConstraintGen = Problem.generateMapping[Int, Int](
-  Seq(Constraint[Int](_ % 2 == 0, "Only even numbers")),
-  Seq(Constraint[Int](_ => true, "No restrictions")))(_)
-val (description,r) = noConstraintGen(_ * 2)
-r(Array(1,2,3,4))
+val p = CollectionProblem.array
+p.toString
+p.test(t => t.sum)
+p.test{ t => {
+  var accum = 0.0
+  val iter = t.toIterator
+  for(i <- 0 until t.size) {
+    accum += iter.next()
+  }
+  accum
+}
+}
 //
 //import scala.util.Random
 //
