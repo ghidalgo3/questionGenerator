@@ -1,17 +1,10 @@
-import problem.CollectionProblem
+import problem._
 
-val p = CollectionProblem.array
+val p = BasicProblem.pickRandom
+
 p.toString
-p.test(t => t.sum)
-p.test{ t => {
-  var accum = 0.0
-  val iter = t.toIterator
-  for(i <- 0 until t.size) {
-    accum += iter.next()
-  }
-  accum
-}
-}
+val sol : String => Int = _.length
+p.test(sol)
 //
 //import scala.util.Random
 //

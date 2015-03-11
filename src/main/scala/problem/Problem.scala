@@ -4,7 +4,7 @@ package problem
  * A Problem[A,B] represents a question whose answer is written in terms
  * of a function from A => B.
  */
-abstract class Problem[A,B](description : String, solution : A => B, testCases : Seq[(A => B) => Boolean]) {
+abstract class Problem[+A,-B](description : String, solution : A => B) {
 
   /**
    * Validates against the test cases
