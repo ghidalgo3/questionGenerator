@@ -7,6 +7,7 @@ package object problem {
 
   val r = new Random()
 
+// TODO: make this a pimp my library pattern on Seq[A] (weird () => A thing will go away)
   /**
    * Ideally this would have read
    * choose(as : ( => A)*) but the compiler does not like variable arguments
