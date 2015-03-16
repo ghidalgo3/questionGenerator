@@ -20,6 +20,7 @@ Parts:
 2a Each question includes zero or more rules such as "Must use trait", "Cannot use foreach", etc
 2b Uses Scala reflection to introspect code and test rules
 2c Also see https://github.com/lihaoyi/scala-parser
+2d Stack overflow on generating AST: http://stackoverflow.com/questions/7828126/scala-code-parser-not-compiler
 
 3 Test validation
 3a Each question includes one or more test cases to test answer
