@@ -18,6 +18,7 @@ object CollectionProblem {
 
   private def choose[A](as : (A)*) = as(r.nextInt(as.size))
 
+  // TODO: this can just be a normal method
   val prompt : (String, String, String) => String = {
     (result, col, typ) => s"Compute the $result given a $col of $typ"
   }
@@ -26,6 +27,7 @@ object CollectionProblem {
     numbers.sum / numbers.size.toDouble
   }
 
+  // TODO: this is just numbers.sum
   def sum(numbers : Traversable[Double]) : Double = numbers.foldLeft(0.0)(_ + _)
 
   def getCollection : (Traversable[Double], String) = {
@@ -47,6 +49,7 @@ object CollectionProblem {
 //    theirFunction => theirFunction(ns) == function(ns)
 //  }
 
+  // TODO: replace this with Stream.continually(r.nextInt(200)).take(n)
   def randomDoubles(n : Int) : Traversable[Double] = {
     val result = new Array[Double](n)
     for(i <- 0 until n) result(i) = r.nextInt(200)
